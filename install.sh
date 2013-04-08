@@ -32,4 +32,8 @@ if [ ! -d "$HOME/.rbenv" ]; then
 
   echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
   echo 'eval "$(rbenv init -)"' >> ~/.profile
+
+  exec $SHELL -l
 fi
+
+chef-solo -c ./solo.rb
