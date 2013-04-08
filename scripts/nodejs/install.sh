@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-apt-get -y install nodejs
+if [ ! -f /usr/bin/node ]; then
+  apt-get -y install nodejs
+fi
