@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Must be called with PG_ROLE, PG_PASSWORD and PG_DB
+PG_CREATE_ROLE_SQL="CREATE ROLE $PG_ROLE LOGIN ENCRYPTED PASSWORD '$PG_PASSWORD' NOINHERIT VALID UNTIL 'infinity';"
+PG_CREATE_DB_SQL="CREATE DATABASE $PG_DB WITH ENCODING='UTF-8' OWNER=$PG_ROLE;"
+
+echo $PG_CREATE_ROLE_SQL
+echo $PG_CREATE_DB_SQL
+
+su -l postgres -c "psql -c \"$PG_CREATE_ROLE_SQL\""
+su -l postgres -c "psql -c \"$PG_CREATE_DB_SQL\""
