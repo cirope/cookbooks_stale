@@ -16,4 +16,7 @@ fi
 
 export PATH="$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH"
 
+rbenv global $RUBY_VERSION
+rbenv rehash
+
 gem install chef --no-ri --no-rdoc
