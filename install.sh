@@ -2,10 +2,9 @@
 
 export RBENV_ROOT="/opt/rbenv"
 RUBY_VERSION="2.0.0-p0"
-SCRIPT_PATH="`dirname \"$0\"`"
-SCRIPT_PATH="`( cd \"$SCRIPT_PATH\" && pwd )`"
 
 # Just install the minimal to compile ruby
+apt-get -y update
 apt-get -y install build-essential libssl-dev git-core
 
 # Install rbenv
@@ -24,10 +23,6 @@ export PATH="$RBENV_ROOT/shims:$RBENV_ROOT/bin:$PATH"
 rbenv global $RUBY_VERSION
 rbenv rehash
 
-gem install chef --no-ri --no-rdoc
-
-rbenv rehash
-
 # Link global rbenv to the current user
 if [ ! -d "$HOME/.rbenv" ]; then
   ln -s $RBENV_ROOT "$HOME/.rbenv"
@@ -37,5 +32,3 @@ if [ ! -d "$HOME/.rbenv" ]; then
 
   exec $SHELL -l
 fi
-
-chef-solo -c "$SCRIPT_PATH/solo.rb"
