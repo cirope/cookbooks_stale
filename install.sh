@@ -2,6 +2,7 @@
 
 export RBENV_ROOT="/opt/rbenv"
 RUBY_VERSION="2.0.0-p0"
+COOKBOOKS_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 # Just install the minimal to compile ruby
 apt-get -y update
