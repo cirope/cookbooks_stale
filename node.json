@@ -1,7 +1,0 @@
-{
-  "user": {
-    "name": "deployer",
-    "password": "$1$V1oTGxVD$eRYtmHS9z6nu9leHLe16F/"
-  },
-  "run_list": ["recipe[main]"]
-}
