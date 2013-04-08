@@ -8,7 +8,7 @@ if [ ! -d $DEPLOYER_HOME ]; then
   adduser \
     --home $DEPLOYER_HOME \
     --shell /bin/zsh \
-    --ingroup www-data \
+    --gid `id -g www-data` \
     --disabled-password \
     --gecos "Deployer" \
     deployer
