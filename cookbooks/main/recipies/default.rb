@@ -5,3 +5,8 @@ user node[:user][:name] do
   home "/home/#{node[:user][:name]}"
   shell '/bin/zsh'
 end
+
+template "/home/#{node[:user][:name]}/.zshrc" do
+  source 'zshrc.erb'
+  owner node[:user][:name]
+end
