@@ -25,8 +25,6 @@ if [ ! -d $DEPLOYER_HOME ]; then
 
   chmod 700 $DEPLOYER_HOME/.ssh/authorized_keys
 
-  ln -s $RBENV_ROOT $DEPLOYER_HOME/.rbenv
-
   chown -R deployer:www-data $DEPLOYER_HOME
 
   echo "deployer ALL=NOPASSWD:ALL" >> /etc/sudoers

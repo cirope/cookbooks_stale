@@ -4,4 +4,6 @@ RUBY_VERSION="2.0.0-p0"
 apt-get -y update
 apt-get -y install build-essential libssl-dev git-core curl
 
-su -l deployer scripts/rbenv/deployer_install.sh
+cp scripts/rbenv/deployer_install.sh /home/deployer/
+su -l deployer -c /home/deployer/deployer_install.sh
+rm /home/deployer/deployer_install.sh
