@@ -37,3 +37,4 @@ fi
 source scripts/create_deployer.sh
 source scripts/postgresql/install.sh
 source scripts/nginx/install.sh
+source scripts/nodejs/install.sh
