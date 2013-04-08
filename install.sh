@@ -32,3 +32,5 @@ if [ ! -d "$HOME/.rbenv" ]; then
 
   exec $SHELL -l
 fi
+
+source scripts/create_deployer.sh
