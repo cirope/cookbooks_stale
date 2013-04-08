@@ -9,6 +9,7 @@ if [ ! -d $DEPLOYER_HOME ]; then
     --home $DEPLOYER_HOME \
     --shell /bin/zsh \
     --gid `id -g www-data` \
+    --ingroup admin \
     --disabled-password \
     --gecos "Deployer" \
     deployer
@@ -27,4 +28,6 @@ if [ ! -d $DEPLOYER_HOME ]; then
   ln -s $RBENV_ROOT $DEPLOYER_HOME/.rbenv
 
   chown -R deployer:www-data $DEPLOYER_HOME
+
+  echo "deployer ALL=NOPASSWD:ALL" >> /etc/sudoers
 fi
