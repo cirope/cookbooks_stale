@@ -20,3 +20,5 @@ rbenv global $RUBY_VERSION
 rbenv rehash
 
 gem install chef --no-ri --no-rdoc
+
+rbenv rehash
