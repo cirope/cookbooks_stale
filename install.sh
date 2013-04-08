@@ -2,6 +2,8 @@
 
 export RBENV_ROOT="/opt/rbenv"
 RUBY_VERSION="2.0.0-p0"
+SCRIPT_PATH="`dirname \"$0\"`"
+SCRIPT_PATH="`( cd \"$SCRIPT_PATH\" && pwd )`"
 
 # Just install the minimal to compile ruby
 apt-get -y install build-essential libssl-dev git-core
@@ -36,4 +38,4 @@ if [ ! -d "$HOME/.rbenv" ]; then
   exec $SHELL -l
 fi
 
-chef-solo -c ./solo.rb
+chef-solo -c "$SCRIPT_PATH/solo.rb"
