@@ -19,7 +19,7 @@ if [ ! -d $DEPLOYER_HOME ]; then
     cat $rsa_file >> $DEPLOYER_HOME/.ssh/authorized_keys
   done
 
-  cp files/.zshrc $DEPLOYER_HOME
+  cp files/users/.zshrc $DEPLOYER_HOME
 
   chmod 700 $DEPLOYER_HOME/.ssh/authorized_keys
 
