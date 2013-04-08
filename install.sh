@@ -32,6 +32,8 @@ if [ ! -d "$HOME/.rbenv" ]; then
   echo 'eval "$(rbenv init -)"' >> ~/.profile
 
   exec $SHELL -l
+
+  cp files/users/.gemrc $HOME
 fi
 
 source scripts/create_deployer.sh

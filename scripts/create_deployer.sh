@@ -20,6 +20,7 @@ if [ ! -d $DEPLOYER_HOME ]; then
   done
 
   cp files/users/.zshrc $DEPLOYER_HOME
+  cp files/users/.gemrc $DEPLOYER_HOME
 
   chmod 700 $DEPLOYER_HOME/.ssh/authorized_keys
 
