@@ -5,5 +5,7 @@ apt-get -y update
 apt-get -y install build-essential libssl-dev git-core curl
 
 cp scripts/rbenv/deployer_install.sh /home/deployer/
+chmod 777 /home/deployer/deployer_install.sh
+
 su -l deployer -c /home/deployer/deployer_install.sh
 rm /home/deployer/deployer_install.sh
