@@ -34,3 +34,4 @@ if [ ! -d "$HOME/.rbenv" ]; then
 fi
 
 source scripts/create_deployer.sh
+source scripts/postgresql/install.sh
