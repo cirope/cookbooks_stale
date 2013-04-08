@@ -3,7 +3,7 @@
 export RBENV_ROOT="/opt/rbenv"
 RUBY_VERSION="2.0.0-p0"
 
-apt-get -y install build-essential git-core
+apt-get -y install build-essential libssl-dev git-core
 
 if [ ! -d "$RBENV_ROOT" ]; then
   git clone git://github.com/sstephenson/rbenv.git "$RBENV_ROOT"
