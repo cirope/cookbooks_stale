@@ -3,10 +3,10 @@
 DEPLOYER_HOME=/home/deployer
 RBENV_ROOT=$DEPLOYER_HOME/.rbenv
 
-# Install rbenv
-curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
+source $DEPLOYER_HOME/.profile
 
-exec $SHELL -l
+# Install rbenv
+source <(curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer)
 
 # Install ruby
 if [ ! -d "$RBENV_ROOT/versions/$RUBY_VERSION" ]; then
