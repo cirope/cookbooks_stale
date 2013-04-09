@@ -2,6 +2,7 @@
 
 DEPLOYER_HOME=/home/deployer
 RBENV_ROOT=$DEPLOYER_HOME/.rbenv
+RUBY_VERSION="2.0.0-p0"
 
 # Install rbenv
 source <(curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer)

@@ -1,4 +1,4 @@
-RUBY_VERSION="2.0.0-p0"
+#!/usr/bin/env bash
 
 # Just install the minimal to compile ruby
 apt-get -y update
