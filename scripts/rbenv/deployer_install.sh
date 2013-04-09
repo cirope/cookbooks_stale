@@ -16,4 +16,6 @@ fi
 
 rbenv global $RUBY_VERSION
 rbenv rehash
+
 gem install bundler
+rbenv rehash
