@@ -6,7 +6,7 @@ RBENV_ROOT=$DEPLOYER_HOME/.rbenv
 # Install rbenv
 source <(curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer)
 
-source $DEPLOYER_HOME/rbenv-env.sh
+source $DEPLOYER_HOME/rbenv_env.sh
 
 # Install ruby
 if [ ! -d "$RBENV_ROOT/versions/$RUBY_VERSION" ]; then
