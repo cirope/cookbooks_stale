@@ -2,12 +2,10 @@
 
 DEPLOYER_HOME="/home/deployer"
 
-apt-get install -y zsh
-
 if [ ! -d $DEPLOYER_HOME ]; then
   adduser \
     --home $DEPLOYER_HOME \
-    --shell /bin/zsh \
+    --shell /bin/bash \
     --gid `id -g www-data` \
     --ingroup admin \
     --disabled-password \
@@ -20,7 +18,6 @@ if [ ! -d $DEPLOYER_HOME ]; then
     cat $rsa_file >> $DEPLOYER_HOME/.ssh/authorized_keys
   done
 
-  cp files/users/.zshrc $DEPLOYER_HOME
   cp files/users/.gemrc $DEPLOYER_HOME
 
   chmod 700 $DEPLOYER_HOME/.ssh/authorized_keys
