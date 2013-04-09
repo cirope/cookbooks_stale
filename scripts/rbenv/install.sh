@@ -9,7 +9,7 @@ if [ ! -d /home/deployer/.rbenv ]; then
 fi
 
 cp scripts/rbenv/deployer_install.sh /home/deployer/
-cp scripts/rbenv/env.sh /home/deployer/rbenv_env.sh
+cp files/config/rbenv/env.sh /home/deployer/rbenv_env.sh
 chown deployer:www-data /home/deployer/deployer_install.sh
 chown deployer:www-data /home/deployer/rbenv_env.sh
 
