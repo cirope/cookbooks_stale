@@ -4,7 +4,7 @@ DEPLOYER_HOME=/home/deployer
 RBENV_ROOT=$DEPLOYER_HOME/.rbenv
 
 # Install rbenv
-cat vendor/rbenv-installer/master/bin/rbenv-installer | bash
+curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
 
 exec $SHELL -l
 

@@ -1,3 +1,0 @@
-[submodule "vendor/rbenv-installer"]
-	path = vendor/rbenv-installer
-	url = git://github.com/fesplugas/rbenv-installer.git
